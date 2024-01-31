@@ -44,13 +44,26 @@ table tr td{
         <script>
             var a = document.getElementById('name').value;
             function check() {
-                if(a==""){
+                if(a=="" ){
                     document.getElementById('name1').innerHTML="Can't be empty.Please Fill "
                 }
-                if(a.length < 3) {
+                else if(!isNaN(a)) {
+                    document.getElementById('name1').innerHTML="Name can't be number"
+                }
+                else if(a.length < 3) {
                     document.getElementById('name1').innerHTML="Name must be greater than 3 letters"
                 }
             }
+            var b = document.getElementById('password').value;
+            function check() {
+                if(b=="" ){
+                    document.getElementById('pass1').innerHTML="Can't be empty.Please Fill "
+                }
+                else if(a.length < 8) {
+                    document.getElementById('pass1').innerHTML="Name must be greater than 8 letters"
+                }
+            }
+
 
         </script>
     </fieldset>
