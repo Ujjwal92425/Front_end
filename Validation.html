@@ -8,7 +8,7 @@
         table tr td {
             border-radius: 5px;
             border: solid;
-            border-color: rgb(25, 129, 219);
+            border-color: rgb(245, 34, 7);
 
 
         }
@@ -22,7 +22,7 @@
     <style>
 table tr td{
     border-radius: 5px;
-    border:2px solid green;
+    border:2px solid rgb(238, 178, 39);
     align-items: center;
 }
     </style>
@@ -46,6 +46,9 @@ table tr td{
             function check() {
                 if(a==""){
                     document.getElementById('name1').innerHTML="Can't be empty.Please Fill "
+                }
+                if(a.length < 3) {
+                    document.getElementById('name1').innerHTML="Name must be greater than 3 letters"
                 }
             }
 
