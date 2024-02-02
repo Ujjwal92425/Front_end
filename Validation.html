@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -13,59 +14,129 @@
 
         }
     </style>
-<<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <style>
-table tr td{
-    border-radius: 5px;
-    border:2px solid rgb(238, 178, 39);
-    align-items: center;
-}
-    </style>
-</head>
+    <<!DOCTYPE html>
+        <html lang="en">
+
+        <head>
+            <meta charset="UTF-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <title>Document</title>
+            <style>
+                table tr td {
+                    border-radius: 5px;
+                    border: 2px solid rgb(238, 178, 39);
+                    align-items: center;
+                }
+            </style>
+        </head>
+
 <body>
     <fieldset>
         <legend>User information</legend>
-        <form action="#" autocomplete="off"  onsubmit="return check()">
+        <form action="#" autocomplete="off" onsubmit="return check()">
             <table style="width:100%" cellpadding="10" cellspacing="10" align="center">
-                <tr><td><input type="text" id="name" placeholder="Enter Your name">  <span id="name1"></span></td>
-               </tr>
-                <tr><td><input type="password" id="password" placeholder="Enter Your password"> <span id="pass1"></span></td></tr>
-                <tr><td><input type="password" id="conpass" placeholder="Enter Your Confirm password">  <span id="conpass1"></span></td></tr>
-                <tr><td><input type="tel" id="mobile" placeholder="Enter Your mobile">  <span id="mobile1"></span></td></tr>
-                <tr><td><input type="email" id="email" placeholder="Enter Your Email">  <span id="email1"></span></td></tr>
-                <tr><td><input type="submit" id="button" placeholder="Submit">  <span id="button1"></span></td></tr>
+                <tr>
+                    <td><input type="text" id="name" placeholder="Enter Your name"> <span id="name1"></span></td>
+                </tr>
+                <tr>
+                    <td><input type="password" id="password" placeholder="Enter Your password"> <span id="pass1"></span>
+                    </td>
+                </tr>
+                <tr>
+                    <td><input type="password" id="conpass" placeholder="Enter Your Confirm password"> <span
+                            id="conpass1"></span></td>
+                </tr>
+                <tr>
+                    <td><input type="tel" id="mobile" placeholder="Enter Your mobile"> <span id="mobile1"></span></td>
+                </tr>
+                <tr>
+                    <td><input type="email" id="email" placeholder="Enter Your Email"> <span id="email1"></span></td>
+                </tr>
+                <tr>
+                    <td><input type="submit" id="button" placeholder="Submit"> <span id="button1"></span></td>
+                </tr>
             </table>
         </form>
         <script>
-            var a = document.getElementById('name').value;
-            function check() {
-                if(a=="" ){
-                    document.getElementById('name1').innerHTML="Can't be empty.Please Fill "
+        
+            const check = () => {
+                if (name.value === "") {
+                    nameError.innerHTML = "It should not be null";
+                    // name.style.outline = "2px solid red" 
                 }
-                else if(!isNaN(a)) {
-                    document.getElementById('name1').innerHTML="Name can't be number"
-                }
-                else if(a.length < 3) {
-                    document.getElementById('name1').innerHTML="Name must be greater than 3 letters"
-                }
-            }
-            var b = document.getElementById('password').value;
-            function check() {
-                if(b=="" ){
-                    document.getElementById('pass1').innerHTML="Can't be empty.Please Fill "
-                }
-                else if(a.length < 8) {
-                    document.getElementById('pass1').innerHTML="Name must be greater than 8 letters"
-                }
+                
             }
 
 
         </script>
     </fieldset>
 </body>
+
 </html>
+
+<!-- <!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        table tr td {
+            border-radius: 5px;
+            border: 2px solid rgb(238, 178, 39);
+            align-items: center;
+        }
+    </style>
+</head>
+
+<body>
+    <fieldset>
+        <legend>User information</legend>
+        <form action="#" autocomplete="off" onsubmit="return check()">
+            <table style="width:100%" cellpadding="10" cellspacing="10" align="center">
+                <tr>
+                    <td><input type="text" id="name" placeholder="Enter Your name" required minlength="3" maxlength="10"> <span id="name1"></span></td>
+                </tr>
+                <tr>
+                    <td><input type="password" id="password" placeholder="Enter Your password" required minlength="8" oninput="checkPassword()"> <span id="pass1"></span>
+                    </td>
+                </tr>
+                <tr>
+                    <td><input type="password" id="conpass" placeholder="Enter Your Confirm password" required oninput="checkPassword()"> <span
+                            id="conpass1"></span></td>
+                </tr>
+                <tr>
+                    <td><input type="tel" id="mobile" placeholder="Enter Your mobile" required pattern="[0-9]{10}"> <span id="mobile1"></span></td>
+                </tr>
+                <tr>
+                    <td><input type="email" id="email" placeholder="Enter Your Email" required pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$"> <span id="email1"></span></td>
+                </tr>
+                <tr>
+                    <td><input type="submit" id="button" placeholder="Submit"> <span id="button1"></span></td>
+                </tr>
+            </table>
+        </form>
+        <script>
+        
+            const check = () => {
+                // You can add more validation logic here if needed
+                return true;
+            }
+
+            const checkPassword = () => {
+                // This function checks if the passwords match and displays a message accordingly
+                const password = document.getElementById("password").value;
+                const conpass = document.getElementById("conpass").value;
+                if (password !== conpass) {
+                    document.getElementById("conpass1").innerHTML = "Passwords do not match";
+                } else {
+                    document.getElementById("conpass1").innerHTML = "";
+                }
+            }
+
+        </script>
+    </fieldset>
+</body>
+
+</html> -->
