@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>
+        Window Open and close event
+    </h2>
+    <button id "btn1" onclick="opening()"> Open Window </button>
+    <button id "btn2" onclick="opening1()"> Close Window </button>
+
+    <script>
+        var a;
+        function opening() {
+            var width = 1000;
+            var height = 1000;
+            var left = (screen.width - width)/2;
+            var top = (screen.height - height)/2;
+            a = window.open('http://google.com', '', 'width=' + width + ', height=' + height + ', left=' + left + ', top=' + top);
+            
+        }
+        function closing1 () {
+            a.close();
+        }
+    </script>
+</body>
+</html>
