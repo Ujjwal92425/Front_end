@@ -9,4 +9,11 @@ main {
     box-shadow: 0 0 6px black;
     margin: auto;
     margin-top: 200px;
+    margin-left: 270px;
+    position: relative;
+}
+.slider {
+    width: 120%;
+    height: 120%;
+    position: absolute;
 }
