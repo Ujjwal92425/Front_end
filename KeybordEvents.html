@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .body{
+            background-color: rgb(45, 240, 247);
+            font-size: larger;
+        }
+    </style>
+</head>
+<body>
+    <h2 style="color: bisque; ">Keybord Events</h2>
+    <input type="text" placeholder="onkeydown" class="one" id="1" onkeydown="color(this)">
+    <input type="text" placeholder="onkeyup" class="one" id="2" onkeyup="color2(this)">
+    <input type="text" placeholder="onkeypress" class="one" id="3" onkeypress= " color3 (this) ">
+
+    <script>
+        function color (input){
+            if(input.value == 'red')
+            input.style.color = "red";
+        }
+        function color2 (input){
+            if(input.value == 'green')
+            input.style.color = "green";
+        }
+        function color3 (input){
+            if(input.value == 'blue')
+            input.style.color = "blue";
+        }
+    </script>
+</body>
+</html>
