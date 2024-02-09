@@ -1,17 +1,18 @@
-const a =document.querySelector('.slider');
+const a =document.querySelectorAll('.slider');
 var counter = 0;
-//console.log(a);
 a.forEach(
     (slider,index) => 
     {
-        slider.style.left = `${index*100} % `
+        slider.style.left = `${index*100}% `
 }
 )
-const Previous=() => {
+const Previous=() => 
+{
     counter--
     sliderrun()
 }
-const Next=() {
+const Next=() =>
+ {
     counter++
     sliderrun()
 
