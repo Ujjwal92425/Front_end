@@ -1,0 +1,45 @@
+<!-- create three rectangle boxes and create three button below rectangle boxes (named as Red,Green.Yellow) When you click on
+Red button , color og 2nd and 3rd boxes will changed to green and yellow, when ou click green, then 1 and 3rs boxes
+coloe=r will be changed to red and yellow and vice versa -->
+
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        .box {
+            width: 100px;
+            height: 100px;
+            margin: 10px;
+            border: 1px solid black;
+        }
+    </style>
+</head>
+<body>
+    <div id="box1" class="box"></div>
+    <div id="box2" class="box"></div>
+    <div id="box3" class="box"></div>
+
+    <button onclick="changeColor('red')">Red</button>
+    <button onclick="changeColor('green')">Green</button>
+    <button onclick="changeColor('yellow')">Yellow</button>
+
+    <script>
+        function changeColor(color) {
+            switch(color) {
+                case 'red':
+                    document.getElementById('box2').style.backgroundColor = 'green';
+                    document.getElementById('box3').style.backgroundColor = 'yellow';
+                    break;
+                case 'green':
+                    document.getElementById('box1').style.backgroundColor = 'red';
+                    document.getElementById('box3').style.backgroundColor = 'yellow';
+                    break;
+                case 'yellow':
+                    document.getElementById('box1').style.backgroundColor = 'red';
+                    document.getElementById('box2').style.backgroundColor = 'green';
+                    break;
+            }
+        }
+    </script>
+</body>
+</html>
