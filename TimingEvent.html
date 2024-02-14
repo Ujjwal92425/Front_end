@@ -1,0 +1,36 @@
+<!-- Create two button ,first button name is start and second button name is stop when you press click first button it will
+display the current time(00:00:00) formate and when you click second button , it will stop the timing [use Js timing
+event as per your requirement] -->
+
+<!DOCTYPE html>
+<html>
+<body style="background-color: rgb(230, 207, 207);">
+
+<p style="border: 2px; color: rgb(240, 68, 6); text-align: center;"><b>>Click "Start" to display the current time, and "Stop" to stop time.</b></p>
+
+<button onclick="start()" style="background-color: rgb(239, 155, 46);border: 1cap; border-radius: 5%; margin-left: 50 px; align-items: center;">Start</button>
+<button onclick="stop()" style="background-color: brown; border: 1cap; border-radius: 5%; margin-left: 100px;align-items: center;">Stop</button>
+
+<p id="demo"></p>
+
+<script>
+var a;
+
+function start() {
+  a = setInterval(myTimer, 1000);
+  var d = new Date();
+  document.getElementById("demo").innerHTML = d.toLocaleTimeString();
+}
+
+function myTimer() {
+  var d = new Date();
+  document.getElementById("demo").innerHTML = d.toLocaleTimeString();
+}
+
+function stop() {
+  clearInterval(a);
+}
+</script>
+
+</body>
+</html>

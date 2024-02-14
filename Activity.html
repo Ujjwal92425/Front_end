@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    .dot {
+        height: 425px;
+        width: 425px;
+        background-color: #bbb;
+        border-radius: 50%;
+        display: inline-block;
+    }
+    .circle {
+        margin: auto;
+    }
+    .button {
+        justify-content: baseline;
+        border-radius: 2px;
+        border-color: rgb(171, 171, 240);
+        margin-left: 100px;
+        margin-top: 100px;
+        padding-bottom: 20px;
+    }
+</style>
+<body>
+    <div class="button">
+        <button id="btn">Click me</button>
+    </div>
+    <div class="circle">
+        <span class="dot" id="bulb"></span>
+    </div>
+    <script>
+        var bulb = document.querySelector("#bulb");
+        var btn = document.querySelector("#btn");
+        var isOn = false;
+        btn.addEventListener("click", function() {
+            if(!isOn) {
+                bulb.style.backgroundColor = "Yellow";
+                isOn = true;
+            } else {
+                bulb.style.backgroundColor = "Transparent";
+                isOn = false;
+            }
+        });
+    </script>
+</body>
+</html>
