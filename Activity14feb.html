@@ -11,6 +11,7 @@ coloe=r will be changed to red and yellow and vice versa -->
             height: 100px;
             margin: 10px;
             border: 1px solid black;
+            border-radius: 5%;
         }
     </style>
 </head>
@@ -25,6 +26,11 @@ coloe=r will be changed to red and yellow and vice versa -->
 
     <script>
         function changeColor(color) {
+            // Reset all boxes to white before applying new colors
+            document.getElementById('box1').style.backgroundColor = 'white';
+            document.getElementById('box2').style.backgroundColor = 'white';
+            document.getElementById('box3').style.backgroundColor = 'white';
+
             switch(color) {
                 case 'red':
                     document.getElementById('box2').style.backgroundColor = 'green';
