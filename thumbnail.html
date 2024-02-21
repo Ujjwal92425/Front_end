@@ -18,11 +18,11 @@
         text-align:center;
     }
     #main{
-        width:40%;
-        height:300px;
+        width:50%;
+        height:400px;
         display:block;
         margin:20px auto;
-        margin-left:250px;
+        margin-left:370px;
     }
 
     </style>
@@ -41,17 +41,16 @@
     </div>
     <script>
         var a = document.getElementById("tn");
-        var b = document.getElementById("img");
+        var b = a.getElementsByTagName("img");
         var c = document.getElementById("main");
         for(let i=0;i<b.length;i++) {
             let d =b[i];
             d.addEventListener("click",function()
             {
                 c.src=this.src;
-            }
-            )
-            
+            })
         }
     </script>
+    
 </body>
 </html>
