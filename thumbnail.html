@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #main,#tn img{
+            box-shadow: 2px 2px 2px yellow;
+            border-radius: 10px;
+        }
+        #tn img{
+            width:100px;
+            height: 100px;
+            margin:10px;
+        }
+        #tn{ 
+        text-align:center;
+    }
+    #main{
+        width:40%;
+        height:300px;
+        display:block;
+        margin:20px auto;
+        margin-left:250px;
+    }
+
+    </style>
+
+</head>
+
+<body>
+    <img src=""  id="main">
+    <div id="tn">
+        <img src="pexels-chevanon-photography-1108099.jpg">
+        <img src="pexels-kawaiiart-1767434.jpg">
+        <img src="pexels-vadim-b-127027.jpg">
+        <img src="pexels-taryn-elliott-4426354.jpg">
+        <img src="pexels-pixabay-45170.jpg">
+        <img src="2024-bmw-x1-m35i-.jpeg">
+    </div>
+    <script>
+        var a = document.getElementById("tn");
+        var b = document.getElementById("img");
+        var c = document.getElementById("main");
+        for(let i=0;i<b.length;i++) {
+            let d =b[i];
+            d.addEventListener("click",function()
+            {
+                c.src=this.src;
+            }
+            )
+            
+        }
+    </script>
+</body>
+</html>
