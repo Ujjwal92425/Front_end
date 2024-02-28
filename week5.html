@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    #aryabhattImage {
+      max-width: 100%;
+      height: auto;
+    }
+    #result {
+      margin-top: 20px;
+    }
+  </style>
+  <title>Aryabhatt</title>
+</head>
+<body>
+
+<img id="aryabhattImage" src="Aryabhatt.jpg" alt="Aryabhatt Image">
+
+<button id="toggleButton">Table / Factorial</button>
+
+<div id="result"></div>
+
+<script>
+  let showTable = true;
+
+  document.getElementById('toggleButton').addEventListener('click', function () {
+    const resultDiv = document.getElementById('result');
+    resultDiv.innerHTML = '';
+
+    if (showTable) {
+      showTable = false;
+      displayTable();
+    } else {
+      showTable = true;
+      displayFactorial();
+    }
+  });
+
+  function displayTable() {
+    const table = document.createElement('table');
+    for (let i = 1; i <= 10; i++) {
+      const row = table.insertRow();
+      const cell = row.insertCell();
+      cell.textContent = `Table of ${i}: ${i * 1} ${i * 2} ${i * 3} ${i * 4} ${i * 5} ${i * 6} ${i * 7} ${i * 8} ${i * 9} ${i * 10}`;
+    }
+
+    document.getElementById('result').appendChild(table);
+  }
+
+  function displayFactorial() {
+    const number = prompt('Enter a number for factorial:');
+    const factorial = calculateFactorial(number);
+    document.getElementById('result').textContent = `Factorial of ${number}: ${factorial}`;
+  }
+
+  function calculateFactorial(num) {
+    if (num === 0 || num === 1) {
+      return 1;
+    }
+    return num * calculateFactorial(num - 1);
+  }
+</script>
+
+</body>
+</html>
