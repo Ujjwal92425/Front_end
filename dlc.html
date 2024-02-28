@@ -1,0 +1,70 @@
+<!-- Create a table of ur mid term  datesheet, u have to apply ,  
+
+    |                     DateSheet
+    |
+    |Subject                Timing              Room No.  
+    |
+    |Os                    9:30-10:30            36-902
+    |Gen-AI                10:30-11:30           34-506
+    | DAA                   12:30-1:30            38-912 -->
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <script src="jquery-3.7.1.min.js"></script>
+    </head>
+    <body>
+
+       <table id="table">
+        <th>
+            <td id="name">DateSheet</td>
+        </th>
+        <tr id="sub">
+            <td>Subject</td>
+            <td>Timing</td>
+            <td>Room No </td>
+        </tr>
+
+        <tr id="Os">
+            <td id="Os">Os</td>
+            <td>9:30-10:30</td>
+            <td>36-902</td>
+        </tr>
+        <tr id="Gen-AI">
+            <td>Gen-AI</td>
+            <td>10:30-11:30</td>
+            <td>34-506</td>
+        </tr>
+        <tr id="Daa">
+            <td>Daa</td>
+            <td>12:30-1:30</td>
+            <td>38-912</td>
+        </tr>
+
+       </table>
+       <script>
+        $(document).ready(function(){
+                $("#Daa").css("backgroundColor","yellow");
+            });
+            $(document).ready(function(){
+                $("#Gen-AI").css("backgroundColor","pink");
+            });
+            $(document).ready(function(){
+                $("#Os").css("backgroundColor","grey");
+            });
+            $(document).ready(function(){
+                $("table").css("border","solid");
+            });
+            $(document).ready(function(){
+                $("#name").css("backgroundColor","red");
+            });
+            $(document).ready(function(){
+                $("#sub").css("backgroundColor","orange");
+            });
+       </script>
+
+        
+    </body>
+    </html>

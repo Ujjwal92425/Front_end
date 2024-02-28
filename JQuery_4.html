@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="jquery-3.7.1.min.js"></script>
+    <style>
+        #box{
+            height: 200px;
+            width: 300px;
+            overflow: scroll;
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <div id="box">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odit consequuntur voluptas quibusdam, accusantium ex,
+        veniam eligendi, non molestiae cupiditate similique voluptatibus facilis nesciunt amet repellendus repudiandae
+        quae dolorum. Nesciunt, voluptas. Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil quasi nisi
+        laborum iure consectetur impedit pariatur! Voluptatem dolore quos modi quasi, dicta possimus consectetur,
+        pariatur odit, reprehenderit explicabo corrupti beatae. Lorem ipsum dolor sit amet consectetur adipisicing elit.
+        Eligendi voluptatum fugit vitae et ex eaque quam quos, error placeat quo libero sit nostrum impedit ratione qui
+        eveniet iste optio! Saepe.</div>
+
+        <script>
+            $(document).ready(function(){
+                $("#box").click(function(){
+                    $("body").css("backgroundColor","orange");
+                });
+            
+            $("#box").contextmenu(function(){
+                    $("body").css("backgroundColor","peach");
+                });
+                $("#box").mouseenter(function(){
+                    $("body").css("backgroundColor","yellow");
+                });
+
+                $("#box").mouseleave(function(){
+                    $("body").css("backgroundColor","pink");
+                });
+            });
+
+        </script>
+
+</body>
+
+</html>

@@ -1,0 +1,6 @@
+$("*")
+$("ul li")
+$(".abc , .xyz)
+$("p:first")
+$("p:last")
+$("li:even")
