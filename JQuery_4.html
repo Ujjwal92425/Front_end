@@ -27,22 +27,33 @@
         eveniet iste optio! Saepe.</div>
 
         <script>
+            // $(document).ready(function(){
+            //     $("#box").click(function(){
+            //         $("body").css("backgroundColor","orange");
+            //     });
+            
+            // $("#box").contextmenu(function(){
+            //         $("body").css("backgroundColor","peach");
+            //     });
+            //     $("#box").mouseenter(function(){
+            //         $("body").css("backgroundColor","yellow");
+            //     });
+
+            //     $("#box").mouseleave(function(){
+            //         $("body").css("backgroundColor","pink");
+            //     });
+            // });
             $(document).ready(function(){
-                $("#box").click(function(){
-                    $("body").css("backgroundColor","orange");
+                $("#box").keydown(function(){
+                    $("box").css("backgroundColor","orange");
                 });
             
-            $("#box").contextmenu(function(){
-                    $("body").css("backgroundColor","peach");
-                });
-                $("#box").mouseenter(function(){
-                    $("body").css("backgroundColor","yellow");
-                });
-
-                $("#box").mouseleave(function(){
-                    $("body").css("backgroundColor","pink");
+            $("#box").keyup(function(){
+                    $("box").css("backgroundColor","peach");
                 });
             });
+
+            
 
         </script>
 
