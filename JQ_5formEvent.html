@@ -1,13 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="jquery-3.7.1.min.js"></script>
     <title>Document</title>
 </head>
+
 <body>
-    
+
     <form autocomplete="off">
         <input type="text" id="one">
         <input type="password" id="two">
@@ -16,30 +18,57 @@
             <option value="DSA">DSA</option>
             <option value="HTML">HTML</option>
         </select>
-        <button type="submit">Submit</button>
+        <button type="submit" id="sub">Submit</button>
     </form>
     <script>
 
         //focus event : if i will focus on that id , the color will be changed.
-        $(document).ready(function(){
+        $(document).ready(function () {
 
-            $("#one").focus(function(){
-                $("#one").css("backgroundColor","PINK");
+            $("#one").focus(function () {
+                $("#one").css("backgroundColor", "PINK");
             });
-        
-        // blur will remove previous color.
 
-            $("#one,#two").blur(function(){
-                $("#one,#two").css("backgroundColor","");
+            // blur will remove previous color.
+
+            $("#one,#two").blur(function () {
+                $("#one,#two").css("backgroundColor", "");
             });
-        
+
             // $("#two").focus(function(){
             //     $("#two").css("backgroundColor","yellow");
             // });
 
+            // on selecting the background color will change to grey
+            $("#one").select(function () {
+                $("#one").css("backgroundColor", "grey");
+            });
 
-        })
+            // change event
+            $("#three").change(function () {
+                $("#three").css("backgroundColor", "red");
+            });
+
+            // $("#sub").click(function(){
+            // alert("Ujjwal");
+            // });    // alert for name
+
+            $("#sub").click(function () {
+                document.write();
+                let n = 5;
+                for (let i = 1; i < n; i++) {
+                    let l = '';
+                    for (let j = 0; j < i; j++) {
+                        l += '*';
+                    }
+                    console.log(l);
+                }
+                
+            });
+        });
+
     </script>
 
 </body>
+
 </html>
