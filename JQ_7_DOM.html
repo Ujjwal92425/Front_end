@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="jquery-3.7.1.min.js"></script>
+    <style>
+        #btn1,#btn2,#btn3{
+            border: 2px solid black;
+            border-radius: 2%;
+            padding:10px;
+        }
+    </style>
+</head>
+<body>
+    <p id="p1"> My name is Ujjwal Kumar </p>
+    <p id="p2"> Jack and <b>Me</b> are <i>Best Friends</i></p>
+
+    <p><input type="text" value="Learning" id="p3"></p>
+
+    <button id="btn1">Show Text </button>
+    <button id="btn2">Show Html </button>
+    <button id="btn3">Show Value </button>
+
+    <script>
+        $(document).ready(function(){
+            $("#btn1").click(function(){
+                alert($("#p1").text());
+            });
+            $("#btn2").click(function(){
+                alert($("#p2").html());
+            });
+            $("#btn3").click(function(){
+                alert($("#p3").val());
+            });
+        })
+    </script>
+</body>
+</html>

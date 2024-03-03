@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>\
+    <script src="jquery-3.7.1.min.js"></script>
+    <style>
+        #box{
+            height: 200px;
+            width: 400px;
+            border: 2px solid red;
+            margin: 20px;
+            overflow: scroll;
+            position: absolute;
+        }
+    </style>
+</head>
+
+<body>
+    <h2> Window Event </h2>
+    <div id="box">
+        On August 23, 2023, Indian became the first nation in the world to successfully perform a soft landing on the
+        lunar south pole with Chandrayaan-3. In another first, the Indian Space Research Organisation (ISRO) is gearing
+        up for its first crewed Indian space mission, Gaganyaan.
+
+        During his trip to the Vikram Sarabhai Space Centre in Thiruvananthapuram, Kerala, Prime Minister Narendra Modi
+        on Tuesday announced the names of the astronauts set to crew the spacecraft, all of whom hold ranks as either
+        wing commanders or group captains in the Indian Air Force (IAF) and boast significant experience as test pilots.
+        What is the Gaganyaan mission?
+        The Gaganyaan project aims to send a team of astronauts into space, orbiting 400 km above Earth for a three-day
+        mission, and safely return them by landing in the Indian Ocean. According to ISRO, the key elements needed for
+        the Gaganyaan mission include developing critical technologies like a safe launch vehicle for astronauts, a life
+        support system to keep them comfortable in space, a way for the crew to escape in case of emergency, and plans
+        for their training, recovery, and medical care.
+
+        The Gaganyaan project, named after the Sanskrit term for a vehicle to the sky, has been developed with an
+        investment of $1 billion, according to the BBC. Its success would mark India as the fourth nation to achieve
+        human spaceflight capability, following Russia, the US and China.
+
+        Vehicle carrying astronauts to space
+        The renowned Indian LVM3 rocket, previously utilised for the Chandrayaan-3 mission, will serve as the launch
+        vehicle for the Gaganyaan mission. It comprises solid, liquid and cryogenic stages. All systems within the LVM3
+        launcher are being reconfigured specifically for the mission to meet human requirements, now designated as the
+        Human Rated LVM3 (HLVM3). According to ISRO, HLVM3 will have the capability to launch the Orbital Module into
+        the intended Low Earth Orbit of 400 km.
+
+        Who is part of the Gaganyaan mission?
+        The prime minister announced the names of the astronauts who are a part of the Gaganyaan mission, during an
+        event held in Thiruvananthapuram, where the four officers were hailed as "dreamers, adventurers, and courageous
+        individuals preparing for space exploration". Hailing from the Indian Air Force, they are Group Captain
+        Prashanth Balakrishnan Nair, Group Captain Ajit Krishnan, Group Captain Angad Pratap, and Wing Commander
+        Shubhanshu Shukla. Only three of these four pilots will eventually go to space as part of the mission.
+
+        Prime Minister Modi and ISRO chief S Somanath adorned their shirts with badges featuring golden wings, with the
+        former calling them "India's pride". The chosen men are Air Force pilots who have been selected after undergoing
+        extensive physical and psychological evaluations. Having completed a rigorous , 13-month training in Russia,
+        they are now continuing their training in India.
+
+        Technology and Training for the Gaganyaan mission
+        Accorsing to ISRO, ensuring human safety is the top priority for the Gaganyaan mission. To achieve this goal, a
+        range of new technologies, including engineering systems and human-centric systems, are being developed and
+        implemented.
+
+        In Bengaluru, the Astronaut Training Facility offers classroom instruction, physical fitness routines, simulator
+        exercises, and flight suit training for the pilots. Training modules encompass academic courses, Gaganyaan
+        Flight Systems, familiarisation with microgravity through Parabolic Flights, aero-medical training, recovery and
+        survival techniques, mastery of flight procedures, and training on Crew Training Simulators. Aero-medical
+        training, regular flying practice, and yoga sessions are also integral components of the training programme.
+
+        Potential Challenges to the mission
+        ISRO has highlighted its primary objectives of a safe launch vehicle for the astronauts, a life support system
+        to keep them comfortable in space, and a way for the crew to escape in case of emergency, but there remain
+        potential challenges for the human space mission, which can include:
+        An increasing threat of space debris in the low Earth orbits which can result in depressurisation of the cabin
+        of the crew module in case of a collision with small debris.
+        Creating a replica of Earth-like conditions inside a small crew module poses a big challenge as creating an
+        actual operating environment for humans for an outer space mission is next to impossible.
+        Due to the limitation of carrying much weight into space, a regenerative environment for food, water, oxygen,
+        carbon-dioxide and human waste has to be developed which can be a challenge.
+    </div>
+    <script>
+
+        // $(document).ready(function() {
+        //     $("#box").scroll(function()
+        //     {
+        //         for(let i=0;i<100;i++) 
+        //         {
+        //         console.log("You are just scrolling....");
+        //         }
+        //     });
+        // });
+
+        $(document).ready(function() {
+            $(window).resize(function(){
+                console.log("You are just resizing....")
+            });
+        });
+
+    </script>
+</body>
+
+</html>
