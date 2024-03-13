@@ -1,0 +1,44 @@
+<!-- Create on p , one heading and one span tag inside a div,then outside div u have tro create two button ,whenever u are
+clicking on the first button the content inside the data will be vanished and when u will click on second button div
+will also vanished. -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="jquery-3.7.1.min.js"></script>
+    <style>
+        #box {
+            background-color: burlywood;
+            border: solid bisque;
+            width: 400px;
+            height: 400px;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="box">
+        <h1 id="h1">Hello</h1>
+        <p1 id="p1">How are u ? </p1>
+
+    </div>
+    <button type="submit" id="btn1">First Click</button>
+    <button type="submit" id="btn2">Second Click</button>
+    <script>
+        $(document).ready(function () {
+            $("#btn1").click(function () {
+                $("div").empty();
+            })
+            $("#btn2").click(function () {
+                $("div").remove();
+            })
+        })
+
+    </script>
+</body>
+
+</html>
