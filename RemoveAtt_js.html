@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form>
+        <input type="text" name="name" id="name"><br>
+        <input type="submit" name="submit" id="btn" disabled="disabled">
+    </form>
+    <script>
+        $(document).ready(function () {
+            $('#name').keyup(function(){
+                if($('#name').val()!=''){
+                    $('#btn').removeAttr('disabled');
+                }
+            });
+                });
+          
+    </script>
+</body>
+</html>
