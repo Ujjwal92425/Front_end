@@ -1,0 +1,44 @@
+<!-- Create an object student in which u have to write the keys as name roll no attendence subjects, u have to create aarray of subjects where the keys will be subject name and course teacher name consedring course teacher as a nested array than u have to display Subject and crossponding teacher name , in the course teacher name u have to pass first name and last name of the teacher -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var Student = {
+            "name": "Ujjwal",
+            "roll": 44,
+            "Attendence": 94,
+            "Subject": [
+                {"name": "DBMS",
+                 "teacher": {"TName": "A"}
+                },
+                {"name": "Daa",
+                 "teacher": {"TName": "C"}
+                },
+                {"name": "AI",
+                 "teacher": {"TName": "E"}
+                },
+                {"name": "Os", 
+                "teacher": {"TName": "G"}
+            },
+                {"name": "WebD", 
+                "teacher": {"TName": "I"}
+            }
+            ]
+        }
+        console.log(Student.name);
+        console.log(Student.roll);
+        console.log(Student.Attendence);
+
+       
+        for (let i = 0; i < Student.Subject.length; i++) {
+            console.log("Subject: " + Student.Subject[i].name);
+            console.log("Teacher: " + Student.Subject[i].teacher.TName);
+        }
+    </script>
+</body>
+</html>
