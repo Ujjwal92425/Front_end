@@ -1,0 +1,49 @@
+<!-- Create an array that comparises the subjects that u are learning in thjis semster than u have to display the 5th element of the array,if the array element at 0th position is Os then replace it to dbms -->
+
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        const Sub= ["Os","Maths","WebD","Node","Network","English","Daa","GenAI"];
+        console.log(Sub);
+        if(Sub[0]=="Os") {
+            Sub[0]="DBMS";
+        }
+        console.log(Sub[0]);
+        console.log(Sub[5]);
+    </script>
+</body>
+</html> -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        const Sub= ["Os","Maths","WebD","Node","Network","English","Daa","GenAI"];
+        console.log(Sub);
+        if(Sub[0]=="Os") {
+            Sub[0]="DBMS";
+        }
+        console.log(Sub[0]);
+        console.log(Sub[5]);
+
+        // Convert the Sub array to a JSON string
+        let jsonString = JSON.stringify(Sub);
+        console.log("JSON string: " + jsonString);
+
+        // Parse the JSON string back to an array
+        let parsedArray = JSON.parse(jsonString);
+        console.log("Parsed array: ", parsedArray);
+    </script>
+</body>
+</html>

@@ -6,9 +6,16 @@
     <title>Document</title>
 </head>
 <body>
+    <p id ="p"></p>
     <script>
-        
+        var stud,a="",i;
+        stud={
+            "name":"Aman",
+            "age":23,
+            "courses":"HTML"
+        }
+        var sh=JSON.stringify(stud);
+        document.getElementId("p").innerHTML=sh;
     </script>
-    
 </body>
 </html>

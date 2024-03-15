@@ -1,0 +1,28 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p id="p"></p>
+    <script>
+        var stud;
+        stud = {
+            "name": "Aman",
+            "age": 23,
+            "courses": "HTML"
+        }
+        // Convert the object into a string
+        var jsonString = JSON.stringify(stud);
+        
+        // Now parse it into an object
+        var sh = JSON.parse(jsonString);
+        
+        // Display the object properties in the paragraph
+        document.getElementById("p").innerHTML = "Name: " + sh.name + ", Age: " + sh.age + ", Courses: " + sh.courses;
+    </script>
+</body>
+</html>
