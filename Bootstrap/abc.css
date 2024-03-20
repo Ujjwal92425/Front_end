@@ -1,0 +1,10 @@
+.container{
+    border: solid blue;
+    border-radius: 5px;
+    background-color: azure;
+}
+.container-fluid{
+    border: solid rgb(254, 246, 7);
+    border-radius: 5px;
+    background-color: rgb(188, 247, 247);
+}
