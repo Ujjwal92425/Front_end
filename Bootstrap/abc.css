@@ -1,4 +1,4 @@
-.container{
+/* .container{
     border: solid blue;
     border-radius: 5px;
     background-color: azure;
@@ -7,4 +7,15 @@
     border: solid rgb(254, 246, 7);
     border-radius: 5px;
     background-color: rgb(188, 247, 247);
+} */
+
+.container{
+    
+    border: 8px rgb(0, 16, 2);
+}
+.row{
+    border: 6px rgb(173, 130, 238);
+}
+.col{
+    border: 6px red;
 }
