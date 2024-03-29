@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="bootstrap.css">
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+        integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js"
+        integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy"
+        crossorigin="anonymous"></script>
+    <style>
+        #Name {
+            margin: 20px;
+        }
+
+        .bt {
+            position: relative;
+            margin: 100px;
+            margin-left: 700px;
+            margin-top: -60px;
+        }
+
+        .container {
+            height: max-content;
+            width: max-content;
+            background-image: url('https://images.pexels.com/photos/949587/pexels-photo-949587.jpeg?cs=srgb&dl=abstract-background-blur-949587.jpg&fm=jpg');
+            background-size: cover;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+
+        <h2 style="margin: 50px;"><b>Task Management </b></h2>
+
+        <form>
+            <label id="Name">Add New Task:</label>
+            <input type="text" placeholder="Enter Task">
+
+            <label for="Pr">Select Priority:</label>
+            <select name="Priority" id="Priority">
+                <option value="Low">High</option>
+                <option value="Medium">Medium</option>
+                <option value="High">Low</option>
+            </select>
+        </form>
+
+        <div class="bt">
+            <button class="btn btn-primary">Add Task</button>
+        </div>
+
+        <h2 style="margin: 50px;"><b>Task:</b></h2>
+        <table class="table ">
+            <thead class="table-group-divider">
+                <th>Task</th>
+                <th>Priority</th>
+                <th>Status</th>
+                <th>Actions</th>
+            </thead>
+            <tbody class="table-group-divider"></tbody>
+
+            <script>
+                document.getElementById('addTaskBtn').addEventListener('click', function() {
+    var taskInput = document.getElementById('taskInput');
+    var taskTable = document.getElementById('taskTable');
+
+    var newRow = taskTable.insertRow();
+
+    var taskCell = newRow.insertCell(0);
+    taskCell.textContent = taskInput.value;
+
+    var priorityCell = newRow.insertCell(1);
+    priorityCell.textContent = 'Normal'; // Set your priority
+
+    var statusCell = newRow.insertCell(2);
+    statusCell.textContent = 'Incomplete'; // Set your status
+
+    var actionsCell = newRow.insertCell(3);
+    actionsCell.innerHTML = '<button class="btn btn-success completeBtn">Complete</button> <button class="btn btn-danger deleteBtn">Delete</button>';
+
+    taskInput.value = ''; // Clear the input field
+});
+document.addEventListener('click', function(e) {
+    if (e.target && e.target.classList.contains('completeBtn')) {
+        var row = e.target.parentNode.parentNode;
+        row.cells[2].textContent = 'Complete';
+    }
+
+    if (e.target && e.target.classList.contains('deleteBtn')) {
+        var row = e.target.parentNode.parentNode;
+        row.parentNode.removeChild(row);
+    }
+});
+
+
+
+            </script>
+
+    </div>
+
+</body>
+
+</html>
