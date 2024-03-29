@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>JSON Quiz</title>
+  <link rel="stylesheet" href="bootstrap.css">
+  <script src="jquery-3.7.1.min.js"></script>
+</head>
+<body>
+
+<div class="container">
+  <h2>JSON Quiz</h2>
+  <form id="quizForm">
+    <div class="form-group">
+      <p><strong>1. What does JSON stand for?</strong></p>
+      <select class="form-control" name="q1">
+        <option value="a">a) JavaScript Object Notation</option>
+        <option value="b">b) JavaScript Oriented Notation</option>
+        <option value="c">c) JavaScript Ordered Notation</option>
+      </select>
+
+      <p><strong>2. What is the file extension commonly used for JSON files?</strong></p>
+      <select class="form-control" name="q2">
+        <option value="a">a) xml</option>
+        <option value="b">b) json</option>
+        <option value="c">c) js</option>
+      </select>
+
+      <p><strong>3. How do you represent data in JSON?</strong></p>
+      <select class="form-control" name="q3">
+        <option value="a">a) Key-Value pairs</option>
+        <option value="b">b) Meta data</option>
+        <option value="c">c) Binary data</option>
+      </select>
+
+      <p><strong>4. What can JSON format be used for?</strong></p>
+      <select class="form-control" name="q4">
+        <option value="a">a) Sending data to the server</option>
+        <option value="b">b) Receiving data from the server</option>
+        <option value="c">c) All of the above</option>
+      </select>
+
+      <p><strong>5. Which of the following is true about JSON?</strong></p>
+      <select class="form-control" name="q5">
+        <option value="a">a) JSON is a data format</option>
+        <option value="b">b) JSON is a database system</option>
+        <option value="c">c) JSON is an HTML tag</option>
+      </select>
+
+      <p><strong>6. What does the "null" value represent in JSON?</strong></p>
+      <select class="form-control" name="q6">
+        <option value="a">a) An undefined value</option>
+        <option value="b">b) Zero</option>
+        <option value="c">c) No value or absence of value</option>
+      </select>
+    </div>
+    <button type="button" class="btn btn-primary" onclick="submitQuiz()">Submit</button>
+  </form>
+</div>
+
+<script>
+  function submitQuiz() {
+    const answers = {
+      q1: 'a', // Correct answer for question 1
+      q2: 'b', // Correct answer for question 2
+      q3: 'a',
+      q4: 'c',
+      q5: 'a',
+      q6: 'c',
+      // Add correct answers for other questions similarly
+    };
+
+    let correctCount = 0;
+    let incorrectCount = 0;
+
+    for (const questionId in answers) {
+      const selectedOption = document.querySelector(select[name=${questionId}]);
+      if (selectedOption) {
+        const userAnswer = selectedOption.value;
+        if (userAnswer === answers[questionId]) {
+          correctCount++;
+          selectedOption.parentElement.style.backgroundColor = 'lightgreen';
+        } else {
+          incorrectCount++;
+          selectedOption.parentElement.style.backgroundColor = 'pink';
+        }
+      }
+    }
+
+    alert(Correct answers: ${correctCount}\nIncorrect answers: ${incorrectCount});
+  }
+</script>
+
+</body>
+</html>

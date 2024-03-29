@@ -1,0 +1,108 @@
+<!-- Demonstrate the use of small(info) and large(information) btn which has the content , then also drop up ,drop left , drop right -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="bootstrap.css">
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+        integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js"
+        integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy"
+        crossorigin="anonymous"></script>
+        <style>
+            .con{
+                margin: 300px;
+                display: flexbox;
+                align-items: center;
+                justify-content: center;
+
+            }
+        </style>
+</head>
+<body>
+    <div class="con">
+    <div class="btn-group">
+        <button class="btn btn-secondary btn-sm dropdown-toggle" type="button" data-bs-toggle="dropdown"
+            aria-expanded="false">
+            Info
+        </button>
+        <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="#">BMW</a></li>
+            <li><a class="dropdown-item" href="#">Tata Nexon</a></li>
+            <li><a class="dropdown-item" href="#">Tata Nexon ev</a></li>
+            <li><a class="dropdown-item" href="#">Thar</a></li>
+            <li><a class="dropdown-item" href="#">Swift</a></li>
+            <li><a class="dropdown-item" href="#">Rolls Royce</a></li>
+        </ul>
+    </div>
+    <div class="btn-group">
+        <button class="btn btn-secondary btn-lg" type="button">
+            Information
+        </button>
+        <button type="button" class="btn btn-lg btn-secondary dropdown-toggle" data-bs-toggle="dropdown"
+            aria-expanded="false">
+            <span class="visually-hidden">Toggle Dropdown</span>
+        </button>
+        <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="#">BMW</a></li>
+            <li><a class="dropdown-item" href="#">Tata Nexon</a></li>
+            <li><a class="dropdown-item" href="#">Tata Nexon ev</a></li>
+            <li><a class="dropdown-item" href="#">Thar</a></li>
+            <li><a class="dropdown-item" href="#">Swift</a></li>
+            <li><a class="dropdown-item" href="#">Rolls Royce</a></li>
+        </ul>
+    </div>
+    <br><br>
+
+    <!-- Default dropup button -->
+    <div class="btn-group dropup">
+        <button type="button" class="btn btn-secondary dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+            Dropup
+        </button>
+        <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="#">Tata Nexon ev</a></li>
+            <li><a class="dropdown-item" href="#">Thar</a></li>
+            <li><a class="dropdown-item" href="#">Swift</a></li>
+            <li><a class="dropdown-item" href="#">Rolls Royce</a></li>
+            <!-- Dropdown menu links -->
+        </ul>
+    </div>
+    <br><br>
+
+    <!-- Default dropup button -->
+    <div class="btn-group dropstart">
+        <button type="button" class="btn btn-secondary dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+            DropLeft
+        </button>
+        <ul class="dropdown-menu">
+            <!-- Dropdown menu links -->
+            <li><a class="dropdown-item" href="#">Tata Nexon ev</a></li>
+            <li><a class="dropdown-item" href="#">Thar</a></li>
+            <li><a class="dropdown-item" href="#">Swift</a></li>
+            <li><a class="dropdown-item" href="#">Rolls Royce</a></li>
+        </ul>
+    </div>
+
+    <br><br>
+
+
+    <div class="btn-group dropend">
+        <button type="button" class="btn btn-secondary dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+            DropRight
+        </button>
+        <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="#">Tata Nexon ev</a></li>
+            <li><a class="dropdown-item" href="#">Thar</a></li>
+            <li><a class="dropdown-item" href="#">Swift</a></li>
+            <li><a class="dropdown-item" href="#">Rolls Royce</a></li>
+
+        </ul>
+    </div>
+    </div>
+</body>
+
+</html>
